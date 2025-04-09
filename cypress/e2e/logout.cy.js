@@ -1,11 +1,11 @@
 import loginPage_PO from "../support/pageObjects/loginPage_PO";
 import logoutPage_PO from "../support/pageObjects/logoutPage_PO";
 
-describe("Logout Functionality Tes", () => {
-  const LoginPage_PO = new loginPage_PO();
-  const LogoutPage_PO = new logoutPage_PO();
-
   describe("Logout Functionality Test", () => {
+
+    const LoginPage_PO = new loginPage_PO();
+    const LogoutPage_PO = new logoutPage_PO();
+
     beforeEach(() => {
       cy.log(Cypress.env("username"), Cypress.env("password"));
       LoginPage_PO.visitUrl();
@@ -27,4 +27,3 @@ describe("Logout Functionality Tes", () => {
       LogoutPage_PO.verifyRedirectToLogin();
     });
   });
-});

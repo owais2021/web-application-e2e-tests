@@ -7,6 +7,7 @@ module.exports = defineConfig({
     password: "supersecure",
   },
   e2e: {
+    baseUrl: "http://localhost:3000",  // Update with your app URL
     setupNodeEvents(on, config) {
       // Required for mochawesome reporter to work
       require("cypress-mochawesome-reporter/plugin")(on);
@@ -14,7 +15,7 @@ module.exports = defineConfig({
     },
 
     //######## Environment URL ##########//
-    baseUrl: "http://localhost:3000/",
+    // baseUrl: "http://localhost:3000/",
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     chromeWebSecurity: false,
     screenshotOnRunFailure: false,

@@ -1,16 +1,21 @@
 {
-  "name": "web-application-e2e-cypressframework",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "qa-homework",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "18": "^0.0.0",
+    "cypress": "^14.3.0",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
-    "cypress": "^14.2.1",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1"
   }
