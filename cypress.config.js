@@ -14,8 +14,6 @@ module.exports = defineConfig({
       return config; 
     },
 
-    //######## Environment URL ##########//
-    // baseUrl: "http://localhost:3000/",
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     chromeWebSecurity: false,
     screenshotOnRunFailure: false,
@@ -30,7 +28,6 @@ module.exports = defineConfig({
     //######## Report Configuration ##########//
     reporter: "cypress-mochawesome-reporter",
     reporterOptions: {
-      configFile: "reporter-config.json",
       inlineAssets: true,
       toConsole: true,
     },
