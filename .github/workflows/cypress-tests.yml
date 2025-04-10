@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build the application
-        run: npm run build  # Or `next build` if needed for Next.js
+        run: npm run build
 
       - name: Start application server
         run: npm start &
@@ -31,7 +31,14 @@ jobs:
           CI: true
 
       - name: Wait for the app to be ready
-        run: npx wait-on http://localhost:3000  # Ensure the app is ready before running tests
+        run: npx wait-on http://localhost:3000
 
       - name: Run Cypress tests
         run: npx cypress run
+
+      - name: Upload Cypress HTML Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-report
+          path: cypress/reports/html/index.html
