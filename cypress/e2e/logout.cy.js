@@ -13,6 +13,7 @@ import logoutPage_PO from "../support/pageObjects/logoutPage_PO";
         Cypress.env("username"),
         Cypress.env("password")
       );
+      
       LoginPage_PO.submit();
     });
 
